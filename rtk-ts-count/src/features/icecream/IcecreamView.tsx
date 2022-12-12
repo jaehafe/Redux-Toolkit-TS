@@ -4,10 +4,13 @@ import { ordered, restocked } from './icecreamSlice';
 
 export const IcecreamView = () => {
   const [value, setValue] = useState(1);
+
   const numOfIcecreams = useAppSelector(
     (state) => state.icecream.numOfIcecreams
   );
+
   const dispatch = useAppDispatch();
+
   return (
     <div>
       <h2>Number of ice creams: {numOfIcecreams}</h2>
